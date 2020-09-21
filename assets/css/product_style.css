@@ -1,0 +1,79 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+  	width: 100%
+  	font-family: 'Alice', serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    /*Safari and Chrome*/
+} 
+
+
+.bg{
+	background-image: url("../images/pro.jpg"); 
+	background-size: 100% 100%;
+	background-position:center;
+	height: 100vh;
+	position: fixed;	
+	background-repeat: no-repeat;
+	right: 0;
+	left: 0;
+	color: white;
+	font-family: 'Libre Baskerville', serif;
+}	
+
+.outdiv{	
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	height: 100%;
+	width: 100%; 
+	align-items: center;
+}
+.proimg{
+	padding: 20px;
+}
+.proimg img{
+	height: 320px;
+	width: 350px;
+	border-radius: 15px;
+	box-shadow: 4px 4px 5px #888888;
+}
+.product{
+	background-color: rgba(255, 255, 255,0.3);
+	padding:25px;
+	border-radius: 10px;
+	color: black;
+	margin: 20px;
+	width: 900px;
+	border: 1px solid rgba(255, 255, 255,0.3);
+	box-shadow: 4px 4px 5px #888888;
+	overflow-y: scroll;
+	
+}
+
+.purchase{
+	background-color: black;
+	margin-left: 40%;	
+	padding: 18px;
+	width: 100px;
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255,0.7);
+}
+.purchase a{
+	text-decoration: none;
+	color: white;
+	margin-left: 8px;
+}
+
+.head{
+	text-align: center;
+}
+
+.purchase:hover{
+	opacity: 0.7;
+}
+

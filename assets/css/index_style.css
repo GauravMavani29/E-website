@@ -1,0 +1,444 @@
+body {
+    margin: 0px auto;
+    padding: 0px;
+    box-sizing: border-box;
+    cursor: pointer;
+    scroll-behavior: smooth;
+    animation: fadeInAnimation ease 3s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+    font-family: 'Alice', serif;
+    /* background: linear-gradient(141deg, #0fb834 0%, #db1fac 51%, #b0e82c 75%); */
+}
+ @keyframes fadeInAnimation { 
+            0% { 
+                opacity: 0; 
+            } 
+            100% { 
+                opacity: 1; 
+            } 
+        } 
+::-webkit-scrollbar {
+    display: none;
+    /*Safari and Chrome*/
+} 
+
+
+/* navbar */
+
+header {
+    background-color: rgba(0, 0, 53, 0.8);
+    color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+}
+
+.headerdiv {
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    padding: 10px 0px;
+}
+
+.headerele {
+    padding: 4px 22px;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0);
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerele a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.headerdiv> :nth-child(1) {
+    position: absolute;
+    align-self: flex-start;
+    left: 45px;
+    top: 10px;
+    font-size: 25px;
+}
+
+.headerele:hover {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    transition: 0.75s;
+}
+
+.headerele a:hover {
+    color: rgb(255, 251, 29);
+}
+
+.headerele a img {
+    align-self: flex-end;
+    margin-top: 8px;
+}
+
+.headerdiv> :nth-child(7) {
+    border: none;
+}
+
+
+/* progress bar */
+
+.progress-container {
+    width: 100%;
+    height: 4px;
+    background: #ccc;
+    box-shadow: 3px 3px 2px rgb(143, 143, 143);
+}
+
+.progress-bar {
+    height: 4px;
+    background: rgb(255, 251, 29);
+    width: 0%;
+}
+
+
+/* Home page */
+
+.home {
+    /*background: url("../images/home.jpg") center/cover no-repeat fixed;*/
+    background-color: black;
+    height: 100vh;
+    position: relative;
+    background-size: 100% 100%;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.7s;
+}
+
+.homeimg{
+    background: url("../images/home.jpg") center/cover no-repeat fixed;
+    clip-path: polygon(0% 77%, 60% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background-size: 100% 100%;
+    height: 100vh;
+    position: relative;
+}
+.outdiv {
+    position: absolute;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 420px;
+    height: 250px;
+    background-color: rgba(63, 81, 181, 0.4);
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #eee;
+    margin-left: 40px;
+}
+
+.outdiv h1 {
+    padding: 10px;
+    margin: 0px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.outdiv h2 {
+    padding: 10px;
+    margin: 0px;
+    color: #9E9E9E;
+    font-size: 22px;
+}
+
+.outdiv a {
+    /* margin: 10px; */
+    padding: 12px;
+    font-size: 18px;
+    border: 0.5px solid white;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    box-shadow: 0 0 17px #eee;
+}
+
+.btn:hover{
+      background-position: right center; 
+}
+
+.social {
+    margin-top: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 150px;
+}
+
+.social img {
+    display: inline-block;
+    height: 28px;
+    width: 28px;
+    border-radius: 5px;
+}
+
+
+/* shop page */
+
+.shop {
+    background-color: white;
+    background-size: 100% 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.shopimg{
+    background-size: 100% 100%;
+    height: 100vh;
+    position: relative;
+}
+.shopoutdiv {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin-top: 62px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.shoptitle{
+    position: absolute;
+    color: black;
+    width: 100%;
+    background: linear-gradient(to right, rgb(0 0 0 / 54%), rgb(110 110 110 / 13%));
+    text-align: center;
+    font-size: 28px;
+    top: 3%;
+    padding: 6px 0px;
+    border: 1px solid black;
+}
+.imgmaindiv {
+    position: relative;
+    height: 65vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    top: 11%;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  max-width: 250px;
+  margin: auto;
+  text-align: center;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card> :nth-child(4), .card> :nth-child(3){
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 226px;
+  font-size: 18px;
+}
+.card> :nth-child(4) a, .card> :nth-child(3) a{
+    text-decoration: none;
+    color: white;
+}
+.card> :nth-child(4):hover, .card> :nth-child(3):hover {
+  opacity: 0.7;
+}
+
+.next {
+    align-self: flex-end;
+    margin-right: 40px;
+    margin-top: 110px;
+}
+
+.explore{
+    background-color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 10px;
+    border:none;
+    color: black;
+    transition: all 0.5s;
+    cursor: pointer;
+    width: 150px;
+    position: relative;
+    filter: invert(100%);
+}
+
+.explore span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.explore span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.explore:hover span {
+  padding-right: 25px;
+}
+
+.explore:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/* about us page */
+
+.about {
+    background-color: black;
+    height: 100vh;
+    position: relative;
+}
+
+.aboutimg{
+    background: url("../images/about.jpg") center/cover no-repeat fixed;
+    background-size: 100% 100%;
+    height: 100vh;
+    position: relative;
+}
+
+
+.aboutmain {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    z-index: 999;
+    top: 0;
+    top: 4%;
+    left: 50%;
+}
+
+.aboutmaincontent {
+    /* clip: rect(30px, 30px, 20px, 20px); */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    letter-spacing: 2px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 60px;
+    padding-bottom: 25px;
+    font-size: 22px;
+    border-radius: 15px;
+    box-shadow: 6px 6px 3px #000000;
+}
+
+.aboutsocial {
+    position: absolute;
+    top: 88.5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 200px;
+    align-self: flex-end;
+    align-items: center;
+    left: -7vw;
+}
+
+.aboutsocial img {
+    height: 32px;
+    width: 32px;
+    border-radius: 5px;
+}
+
+
+/* contact us page */
+
+.contact {
+    background-color: black;
+    background-size: 100% 100%;
+    height: 100vh;
+    position: relative; 
+    background-color: black;
+    background-size: 100% 100%;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.contactimg{
+    background: url("../images/contact.jpg") center/cover no-repeat fixed;
+    /*clip-path: polygon(0 17%, 100% 17%, 100% 100%, 0% 100%);*/
+    background-size: 100% 100%;
+    height: 100vh;
+    position: relative;
+}
+
+
+.contactoutdiv {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    height: 90%;
+    margin-top: 50px;
+    left: 200px;
+    padding-top: 15px;
+}
+
+.getin {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin: 8px;
+}
+
+.contactmaincontact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.innercontact {
+    background-color: rgba(255, 255, 255, 0.4);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 12px 4px;
+    border-radius: 15px;
+}
+
+.innercontact img {
+    height: 50px;
+    width: 50px;
+}
+
+.innercontact h1 {
+    margin: 2px 0px;
+    color: white;
+}
