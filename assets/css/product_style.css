@@ -4,8 +4,22 @@ body{
 	height: 100%;
   	width: 100%
   	font-family: 'Alice', serif;
+  	cursor: pointer;
+    scroll-behavior: smooth;
+    animation: fadeInAnimation ease 3s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
 }
 
+ @keyframes fadeInAnimation { 
+            0% { 
+                opacity: 0; 
+            } 
+            100% { 
+                opacity: 1; 
+            } 
+        } 
+        
 ::-webkit-scrollbar {
     display: none;
     /*Safari and Chrome*/
@@ -52,16 +66,18 @@ body{
 	border: 1px solid rgba(255, 255, 255,0.3);
 	box-shadow: 4px 4px 5px #888888;
 	overflow-y: scroll;
+	padding-bottom: 15px;
 	
 }
 
 .purchase{
+	position: relative;
 	background-color: black;
-	margin-left: 40%;	
+	margin: 10px auto;	
+	margin-bottom: 0px;
 	padding: 18px;
 	width: 100px;
 	border-radius: 10px;
-	border: 1px solid rgba(255, 255, 255,0.7);
 }
 .purchase a{
 	text-decoration: none;
@@ -71,6 +87,7 @@ body{
 
 .head{
 	text-align: center;
+	color: white;
 }
 
 .purchase:hover{

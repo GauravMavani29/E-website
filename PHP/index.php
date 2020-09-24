@@ -16,7 +16,7 @@
         <div class="headerele"><a href="#3">About Us</a></div>
         <div class="headerele"><a href="#4">Contact Us</a></div>
         <div class="headerele"><a href="">LogIn</a></div>
-        <div class="headerele"><a href=""><img src="../assets/png/cart.png" alt="Could'n find"></a></div>
+        <div class="headerele"><a href="./cart.php"><img src="../assets/png/cart.png" alt="Could'n find"></a></div>
     </div>
     <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
@@ -40,14 +40,11 @@
 <div class="shop" id="2">
     <div class="shopimg"></div>
     <div class="shopoutdiv">
-       <!--  <div class="shoptitle">
-            Explore More For More Branded T-shirts
-        </div> -->
         <div class="imgmaindiv">
             
         </div>
         <div class="next">
-            <a href=""><button class="explore"><span>Explore more </span></button></a>
+            <a href="./shop.php"><button class="explore"><span>Explore more </span></button></a>
         </div>
     </div>
 </div>
@@ -154,7 +151,17 @@ function index(){
 }
 
 index();
+
+
 </script>
 
+<!-- <script type="text/javascript">
+        function addcart(num){
+            var temp = num;
+            <?php $val ?>temp;
+
+            alert(<?php $val ?>);
+        }
+</script> -->
 </body>
 </html>

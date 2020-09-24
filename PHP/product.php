@@ -1,3 +1,6 @@
+<?php 
+$t_id = $_GET['t_id'];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,40 +12,17 @@
 <body>
 	<div class="bg">
 		<div class="outdiv">
-			<div class="proimg">
-				<img src="../assets/images/tshirts/1.jpg" id="pimg" alt="">
-			</div>
-			<div class="product">
-				<div class="proinfo">
-					<h1 id="heading" class="head"></h2> 
-					<p>
-						<b>SIZE&nbsp;:</b><font>&nbsp;&nbsp;&nbsp;</font>
-					</p>
-					<p>
-						<b>LENGTH&nbsp;:</b><font>&nbsp;&nbsp;&nbsp;Inches</font>
-					</p>
-					<p>
-						<b>WASHCARE&nbsp;:</b><font>&nbsp;&nbsp;&nbsp;</font>
-					</p>
-					<p>
-						<b>COMPOSITION&nbsp;:</b><font>&nbsp;&nbsp;&nbsp;</font>
-					</p>
-					<p>
-						<b>PRICE&nbsp;:</b><font id="price"></font>
-					</p>	
-				
-					<p>
-						<b>Shipping Info:</b>
-
-						<font>The product ships within 2 working days, excluding Sundays and public holidays.</font>
-					</p>
-					<div class="purchase">
-						<a href="">PURCHASE</a>
-					</div>
-				</div>
-			</div>
+			
 		</div>
 	</div>
-
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+	function explore(){
+		$.post("productback.php",{tshirt_id:<?php echo $t_id; ?>}, function(data,status){
+			document.getElementsByClassName("outdiv")[0].innerHTML = data;
+		})
+	}
+	explore();
+</script>
 </body>
 </html>

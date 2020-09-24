@@ -1,7 +1,12 @@
 body {
-      font-family: Arial, Helvetica, sans-serif;
       padding: 0px;
       margin: 0px;
+      font-family: 'Alice', serif;
+      cursor: pointer;
+      scroll-behavior: smooth;
+      animation: fadeInAnimation ease 3s; 
+      animation-iteration-count: 1; 
+      animation-fill-mode: forwards;
     }
 * {box-sizing: border-box;}
 

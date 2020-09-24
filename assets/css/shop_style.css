@@ -74,6 +74,27 @@ body,html{
     text-decoration: none;
     color: white;
 }
+.spn .spn:after{
+    transition: 0.5s;
+}
+.spn span{
+    transition: 0.5s;
+}
+.spn span:after{
+     content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 5;
+      right: 60px;
+      
+}
+.spn span:hover{
+  padding-right: 25px;
+}
+.spn:hover .spn:after {
+  opacity: 1;
+  right:58px;
+}
 
 .details{
     font-size: 20px;

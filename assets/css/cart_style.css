@@ -1,0 +1,135 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%
+    font-family: 'Alice', serif;
+    cursor: pointer;
+    scroll-behavior: smooth;
+    animation: fadeInAnimation ease 3s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+}
+ @keyframes fadeInAnimation { 
+            0% { 
+                opacity: 0; 
+            } 
+            100% { 
+                opacity: 1; 
+            } 
+        } 
+::-webkit-scrollbar {
+    display: none;
+    /*Safari and Chrome*/
+} 
+
+.cartmaindiv{
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    overflow-y: scroll;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.card{
+    box-shadow: 1px 0px 8px 3px rgba(0, 0, 0, 0.4);
+    height: 400px;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 9px 0px;
+}
+
+.imgdiv, .imgdiv img{
+    height: 250px;
+    width: 270px;
+    margin-right: 2px;
+}
+
+.detailsdiv{
+    height: 150px;
+    width: 270px;
+}
+.price{
+    color: grey;
+    font-size: 22px;  
+    padding: 0px;
+    margin: 5px;  
+}
+
+.detailsdiv> :nth-child(2), .detailsdiv> :nth-child(3){
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 5px 0px;
+}
+.detailsdiv> :nth-child(2) a, .detailsdiv> :nth-child(3) a{
+    text-decoration: none;
+    color: white;
+}
+.detailsdiv> :nth-child(2):hover, .detailsdiv> :nth-child(3):hover {
+  opacity: 0.7;
+}
+
+.detailsdiv{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.next {
+    align-self: right;
+    margin-right: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+}
+
+.explore{
+    background-color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 10px;
+    border:none;
+    color: black;
+    transition: all 0.5s;
+    cursor: pointer;
+    width: 150px;
+    position: relative;
+    filter: invert(100%);
+}
+
+.explore span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.explore span:after {
+  content: '\00ab';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.explore:hover span {
+  padding-right: 25px;
+}
+
+.explore:hover span:after {
+  opacity: 1;
+  right: 0;
+}

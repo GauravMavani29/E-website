@@ -213,17 +213,6 @@ header {
     flex-direction: column;
 }
 
-.shoptitle{
-    position: absolute;
-    color: black;
-    width: 100%;
-    background: linear-gradient(to right, rgb(0 0 0 / 54%), rgb(110 110 110 / 13%));
-    text-align: center;
-    font-size: 28px;
-    top: 3%;
-    padding: 6px 0px;
-    border: 1px solid black;
-}
 .imgmaindiv {
     position: relative;
     height: 65vh;
@@ -236,7 +225,7 @@ header {
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 0px 8px 3px rgba(0, 0, 0, 0.4);
   max-width: 250px;
   margin: auto;
   text-align: center;
@@ -250,22 +239,53 @@ header {
 .card> :nth-child(4), .card> :nth-child(3){
   border: none;
   outline: 0;
-  padding: 12px;
+  padding: 8px;
   color: white;
   background-color: #000;
   text-align: center;
   cursor: pointer;
-  width: 226px;
+  width: 234px;
   font-size: 18px;
+  
 }
-.card> :nth-child(4) a, .card> :nth-child(3) a{
+.card> :nth-child(4) a{
+    background:none;
     text-decoration: none;
     color: white;
+    border:none;
+    font-size: 17px;
+    font-family: 'Alice', serif;
+    position: absolute;
+    margin: 6px 0px;
+    right:78px;
+    transition: 0.5s;
 }
-.card> :nth-child(4):hover, .card> :nth-child(3):hover {
-  opacity: 0.7;
+.card> :nth-child(4) img{
+    margin-right: 120px;
+    opacity: 0;
+    transition: 0.5s;
+}
+ .card> :nth-child(3) a{
+    background:none;
+    text-decoration: none;
+    color: white;
+    border:none;
+    font-size: 17px;
+    font-family: 'Alice', serif;
+ }
+
+.card> :nth-child(4):hover a{
+  padding-right: 85px;
+  right: 0;
 }
 
+.card> :nth-child(4):hover img{
+      opacity: 1;
+      padding-right: 25px;
+}
+.card> :nth-child(3):hover{
+    opacity: 0.7;
+}
 .next {
     align-self: flex-end;
     margin-right: 40px;
