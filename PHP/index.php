@@ -15,7 +15,7 @@
         <div class="headerele"><a href="#2">Shop</a></div>
         <div class="headerele"><a href="#3">About Us</a></div>
         <div class="headerele"><a href="#4">Contact Us</a></div>
-        <div class="headerele"><a href="">LogIn</a></div>
+        <div class="headerele"><a href="./login.php">LogIn</a></div>
         <div class="headerele"><a href="./cart.php"><img src="../assets/png/cart.png" alt="Could'n find"></a></div>
     </div>
     <div class="progress-container">
@@ -27,7 +27,7 @@
     <div class="outdiv">
         <h1>EASY START WITH I_AM_ENGINEER_CO</h1>
         <h2>We are team of talented designers and programmer making and selling t-shirts</h2>
-        <a class="btn btn-1">GET STARTED</a>
+        <a class="btn btn-1" href="#2">GET STARTED</a>
         <div class="social">
             <img src="../assets/png/instagram.png" alt="">
             <img src="../assets/png/facebook.png" alt="">
@@ -52,7 +52,7 @@
     <!-- <img src="../assets/images/about.jpg" alt=""> -->
     <div class="aboutimg"></div>
     <div class="aboutmain">
-        <div class="aboutmaincontent" data-aos="zoom-out" data-aos-duration="1500">
+        <div class="aboutmaincontent" data-aos="zoom-out" data-aos-duration="1000">
             <div>
                 We bring you the trendiest and most exclusive brands from around the world to your wardrobe. Forget scouring the net for what’s hot globally, we’ve got you  covered.<br><br>
                 Why let a world that loves to police your wardrobe and your exression get the upper hand, anyway?<br><br>
@@ -149,19 +149,7 @@ function index(){
         document.getElementsByClassName("imgmaindiv")[0].innerHTML = data;
     })
 }
-
 index();
-
-
 </script>
-
-<!-- <script type="text/javascript">
-        function addcart(num){
-            var temp = num;
-            <?php $val ?>temp;
-
-            alert(<?php $val ?>);
-        }
-</script> -->
 </body>
 </html>

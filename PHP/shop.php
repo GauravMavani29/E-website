@@ -14,7 +14,7 @@
 
 		</div>	
 		<div class="next">
-            <a href=""><button class="explore"><span>Go Back </span></button></a>
+            <a href="./index.php"><button class="explore"><span>Go Back </span></button></a>
         </div>
 	</div>
 

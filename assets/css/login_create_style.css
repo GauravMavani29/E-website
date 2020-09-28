@@ -1,0 +1,141 @@
+body, html {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+    box-sizing: border-box;
+	cursor: pointer;
+	scroll-behavior: smooth;
+	animation: fadeInAnimation ease 3s; 
+	animation-iteration-count: 1; 
+	animation-fill-mode: forwards;
+	font-family: 'Alice', serif;
+}
+
+ @keyframes fadeInAnimation { 
+            0% { 
+                opacity: 0; 
+            } 
+            100% { 
+                opacity: 1; 
+            } 
+        } 
+::-webkit-scrollbar {
+    display: none;
+    /*Safari and Chrome*/
+} 
+
+
+/*loginbackground*/
+.lg_bg{
+	background-image: url("../images/login.jpg");
+	background-color: rgba(255, 255, 255,0.4);
+	height: 100vh;
+	width: 100%;
+	background-position: center;	
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/*Maindiv*/
+.Maindiv{
+	align-items: space-around;
+	background-color: rgba(255, 153, 153,0.22);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding:40px 40px ;
+	margin-left: 100px;
+	position: absolute;
+	border-radius: 18px;
+	border:0.5px solid rgba(153, 153, 153, 0.2);
+}
+
+/*login form*/
+.log{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+#myfrom{
+	opacity: 0.3;
+}
+/*input field*/
+input[type=text],input[type=password]{
+	margin: 10px;
+	height: 30px;
+	text-align: center;
+	border: 1.0px solid rgba(77, 77, 77, 0.6);
+	border-radius: 20px;
+	background-color: inherit;
+	background: none;
+	color: inherit;
+	padding: auto;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+	transform: scale(0.95);
+	transition:all 0.4s linear;
+	color: rgb(0, 89, 179);
+}
+input[type=submit]{
+	background-color: purple;
+	padding: auto;
+	border-radius: 4px;
+	width:85px;
+	height: 35px;
+	color: #fff;
+	border-radius: 20px;
+	font-weight: bold;	
+	font-size: 15px;
+	cursor: pointer;
+	border:none;
+	color: rgb(255, 221, 204);
+	transition:all 0.5s linear;
+	transform: scale(1);
+	font-family: 'Alice', serif;
+	margin-top: 5px;
+}
+
+.signin{
+	font-weight: bold;	
+	font-size: 25px;
+	padding-bottom: 15px;
+	color: rgb(96, 0, 128);
+}
+
+input[type=text]:hover,input[type=password]:hover {
+	transform: scale(1.1);
+	background-color: rgb(255, 230, 230)
+}
+
+input[type=submit]:hover {
+	transform: scale(0.92);
+}
+
+.cna{
+	padding-top: 15px;
+}
+.cna a{
+	text-decoration: none;
+	color: rgb(96, 0, 128);
+}
+
+.cr-field{
+	font-size: 15px;
+	margin-top: 10px;
+}
+
+.cr-title{
+	padding: 5px;
+	margin-bottom: 15px;
+	font-size: 27px;
+	font-weight: bold;
+	color: purple;
+}
+

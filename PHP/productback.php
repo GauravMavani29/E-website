@@ -39,7 +39,7 @@ error_reporting(0);
 		$html .= '	<font>The product ships within 2 working days, excluding Sundays and public holidays.</font>';
 		$html .= '</p>';
 		$html .= '<div class="purchase">';
-		$html .= '	<a href="">PURCHASE</a>';
+		$html .= '	<a href="./purchase.php?t_id='.$t_id.'">PURCHASE</a>';
 		$html .= '</div>';
 		$html .= '</div>';
 		$html .= '</div>';

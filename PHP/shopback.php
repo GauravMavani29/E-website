@@ -7,7 +7,7 @@
 	$html = "";
 	while($array = mysqli_fetch_assoc($query))
 	{
-		$html .= '<div class="imgdiv">';
+		$html .= '<div class="imgdiv" data-aos="flip-left" data-aos-duration="1200">';
 		$html .= '<img src='.$array['tshirt_image'].' alt="">';
 		$html .= '<div class="detailmain">';
 	    $html .= '<div class="details"><a href="./cart.php?id='. $array['tshirt_id'] .'"  class="spn"><span class="spn">Add to Cart</span></a></div>';

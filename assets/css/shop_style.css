@@ -53,6 +53,9 @@ body,html{
     box-shadow: 0 0 15px #eee;
 }
 
+.imgdiv img:hover{
+  opacity: 0.7;
+}
 .imgdiv:hover .detailmain{
     opacity: 1;
 }
@@ -73,6 +76,10 @@ body,html{
 .detailmain a{
     text-decoration: none;
     color: white;
+}
+
+.details a:hover{
+  color: pink;
 }
 .spn .spn:after{
     transition: 0.5s;
