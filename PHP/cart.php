@@ -15,7 +15,7 @@
 		
 	</div>
     <div class="next">
-            <a href="./shop.php"><button class="explore"><span>Back</span></button></a>
+            <button class="explore" onclick="history.back()"><span>Back</span></button>
     </div>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script>

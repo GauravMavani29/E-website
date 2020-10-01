@@ -14,7 +14,7 @@
 
 		</div>	
 		<div class="next">
-            <a href="./index.php"><button class="explore"><span>Go Back </span></button></a>
+            <button class="explore" onclick="history.back()"><span>Go Back </span></button>
         </div>
 	</div>
 
