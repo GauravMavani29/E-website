@@ -69,7 +69,7 @@ error_reporting(0);
 			$todo+=1;
 		}
 
-		if($_POST['method'] === "net banking")
+		if($_POST['method'] === "Net banking")
 		{
 			$card = $_POST['cardname'];
 			if(!ctype_alpha(str_replace(' ', '', $card))){
@@ -130,8 +130,8 @@ error_reporting(0);
         $total = $_POST["total"];
         $month = $_POST['month'];
         $year = $_POST['year'];
-        if(($_POST["method"] === "cash") and ($todo == 9)){
-        	$cashinsert = "INSERT INTO `purchase` (`order_id`, `user_id`, `tshirt_id`, `Full Name`, `Size`, `Quantity`, `Total`, `Method`, `Address`, `City`, `State`, `Zip`, `Card holder`, `Card number`, `Exp month`, `Exp year`, `CVV`, `Email`, `Mo number`, `Tshirt_image`) VALUES (NULL, '$user', $t_id, '$fname', '$size', $quantity, $total , '$method', '$address', '$city', '$state', $newzip, NULL , NULL, NULL, NULL , NULL, '$email', $number, '$image');";
+        if(($_POST["method"] === "Cash on delivery") and ($todo == 9)){
+        	$cashinsert = "INSERT INTO `purchase` (`order_id`, `user_id`, `tshirt_id`, `Full Name`, `Size`, `Quantity`, `Total`, `Method`, `Address`, `City`, `State`, `Zip`, `Card holder`, `Card number`, `Exp month`, `Exp year`, `CVV`, `Email`, `Mo number`, `Tshirt_image`, `date_time`) VALUES (NULL, '$user', $t_id, '$fname', '$size', $quantity, $total , '$method', '$address', '$city', '$state', $newzip, NULL , NULL, NULL, NULL , NULL, '$email', $number, '$image', current_timestamp);";
 
         	$cashquery = mysqli_query($con,$cashinsert) or die("error:".mysqli_error($con));
 
@@ -143,11 +143,11 @@ error_reporting(0);
 
         	$order_id = $array["order_id"];
         	mysqli_close($con);
-        	header("location: ./bill.php?order_id=$order_id");
+        	header("location: ./bill.php?o_id=$order_id");
         }
-        elseif($_POST["method"] === "net banking" and $todo == 12)
+        elseif($_POST["method"] === "Net banking" and $todo == 12)
         {
-        	$onlineinsert = "INSERT INTO `purchase` (`order_id`, `user_id`, `tshirt_id`, `Full Name`, `Size`, `Quantity`, `Total`, `Method`, `Address`, `City`, `State`, `Zip`, `Card holder`, `Card number`, `Exp month`, `Exp year`, `CVV`, `Email`, `Mo number`, `Tshirt_image`) VALUES (NULL, '$user', $t_id, '$fname', '$size', $quantity, $total , '$method', '$address', '$city', '$state', $newzip, '$card' , '$cardnumber', '$month', '$year' , '$cvv', '$email', $number, '$image');";
+        	$onlineinsert = "INSERT INTO `purchase` (`order_id`, `user_id`, `tshirt_id`, `Full Name`, `Size`, `Quantity`, `Total`, `Method`, `Address`, `City`, `State`, `Zip`, `Card holder`, `Card number`, `Exp month`, `Exp year`, `CVV`, `Email`, `Mo number`, `Tshirt_image`, `date_time`) VALUES (NULL, '$user', $t_id, '$fname', '$size', $quantity, $total , '$method', '$address', '$city', '$state', $newzip, '$card' , '$cardnumber', '$month', '$year' , '$cvv', '$email', $number, '$image', current_timestamp);";
 
         	$onlinequery = mysqli_query($con,$onlineinsert) or die("error:".mysqli_error($con));
 
@@ -160,7 +160,7 @@ error_reporting(0);
         	$order_id = $array["order_id"];
 
         	mysqli_close($con);
-        	header("location: ./bill.php");
+        	header("location: ./bill.php?o_id=$order_id");
         }
 	}
 ?>

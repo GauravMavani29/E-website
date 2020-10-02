@@ -9,10 +9,10 @@
 	while($array = mysqli_fetch_assoc($query)){
 		if($i<4){
 			$html .= '<div class="card"  data-aos="flip-left" data-aos-duration="1200">';
-            $html .= '<img src='.$array["tshirt_image"].' alt="Denim Jeans" style="width:100%">';
+            $html .= '<img src='.$array["tshirt_image"].' alt="T-shirt" style="width:100%">';
             $html .= '<p class="price">$'.$array["tshirt_price"].'</p>';
-            $html .= '<p><a href="./product.php?t_id='.$array["tshirt_id"].'">Explore</a></p>';
-            $html .= '<p><img src="../assets/png/cart.png" alt="Could n find"><a href="./cart.php?id='. $array["tshirt_id"] .'">Add to Cart</a></p>';
+            $html .= '<p><a href="./PHP/product.php?t_id='.$array["tshirt_id"].'">Explore</a></p>';
+            $html .= '<p><img src="assets/png/cart.png" alt="Could n find"><a href="./PHP/cart.php?id='. $array["tshirt_id"] .'">Add to Cart</a></p>';
             $html .= '</div>';
             $i++;
         }

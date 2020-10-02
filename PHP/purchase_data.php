@@ -1,4 +1,3 @@
-
 	<div class="maindiv">
 		<div class="outerdiv">
 			<h1>Purchase Product</h1>
@@ -13,20 +12,18 @@
 							<label>Size &nbsp;&nbsp;<span><?php echo $sizeerr; ?></span></label>
 							<div>
 							<?php
+								$size = explode(" ", $array["tshirt_size"]);
 								for($i=0; $i<sizeof($size)-1; $i++)
 								{
 							?>
-							
 								<label><?php echo $size[$i]; ?></label>
-						    	<input type="radio" name="size" value="<?php echo $size[$i]; ?>" <?php if($size[$i] === $newsize){ echo "checked"; } ?> required>
-						
-							
+						    	<input type="radio" name="size" value="<?php echo $size[$i]; ?>" <?php if($size[$i] == $newsize){ echo "checked"; } ?> required>
 							<?php } ?>
 								</div>
 						</div>
 						<div class="input">
 							<label>Quantity</label>
-							<input type="number" name="quantity" placeholder="Quantity" min="1" onchange="cal()" id="quantity">
+							<input type="number" name="quantity" placeholder="Quantity" min="1" onchange="cal()" id="quantity" required>
 						</div>
 						<div class="input">
 							<label>Total</label>
@@ -36,9 +33,9 @@
 							<label>Method &nbsp;&nbsp;<span><?php echo $methoderr; ?></span></label>
 							<div>
 								<label>Cash on delivery</label>
-								<input type="radio" name="method"  id="uncheck" value="cash" <?php if("cash" === $newmethod){ echo "checked"; } ?> required>
+								<input type="radio" name="method"  id="uncheck" value="Cash on delivery" <?php if("Cash on delivery" === $newmethod){ echo "checked"; } ?> required>
 								<label>Net banking</label>
-								<input type="radio" name="method" id="check" value="net banking" <?php if("net banking" === $newmethod){ echo "checked";} ?>>
+								<input type="radio" name="method" id="check" value="Net banking" <?php if("Net banking" === $newmethod){ echo "checked";} ?>>
 							</div>
 							
 						</div>
@@ -118,7 +115,7 @@
 							</div>
 							<div class="input">
 								<label>Mobile.no &nbsp;&nbsp;<span><?php echo $mnoerr; ?></span></label>	
-								<input type="text" name="mno" placeholder="Mobile number.."   value="<?php echo $newmno; ?>">
+								<input type="text" name="mno" placeholder="Mobile number.." value="<?php echo $newmno; ?>">
 							</div>
 							<div class="input">
 								<input type="submit" name="submit" value="Purchase">
@@ -155,6 +152,8 @@
 	    {
 	      $(".online").prop("disabled",true);
 	    }
+
+   
 });
 
 	function cal(){
@@ -162,4 +161,5 @@
 		var temp = document.getElementById("quantity").value;
 		document.getElementById("total").value = temp * mul;
 	}
+
 </script>

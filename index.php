@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>T-shirt Selling</title>
-    <link rel="stylesheet" type="text/css" href="../assets/css/index_style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/index_style.css">
     <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 <body>
 <header>
@@ -15,8 +17,15 @@
         <div class="headerele"><a href="#2">Shop</a></div>
         <div class="headerele"><a href="#3">About Us</a></div>
         <div class="headerele"><a href="#4">Contact Us</a></div>
-        <div class="headerele"><a href="./login.php">LogIn</a></div>
-        <div class="headerele"><a href="./cart.php"><img src="../assets/png/cart.png" alt="Could'n find"></a></div>
+        <div  class="dropdown">
+            <div class="headerele dropdown"><a href="./PHP/login.php" class="">LogIn <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                 <a href="./PHP/logout.php">LogOut</a>
+            </div>
+        </div>
+    </div>
+        <div class="headerele"><a href="./PHP/order.php">Orders</a></div>    
+        <div class="headerele"><a href="./PHP/cart.php"><img src="./assets/png/cart.png" alt="Could'n find"></a></div>
     </div>
     <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
@@ -29,10 +38,10 @@
         <h2>We are team of talented designers and programmer making and selling t-shirts</h2>
         <a class="btn btn-1" href="#2">GET STARTED</a>
         <div class="social">
-            <img src="../assets/png/instagram.png" alt="">
-            <img src="../assets/png/facebook.png" alt="">
-            <img src="../assets/png/twitter.png" alt="">
-            <img src="../assets/png/linkedin.png" alt="">
+            <img src="./assets/png/instagram.png" alt="">
+            <img src="./assets/png/facebook.png" alt="">
+            <img src="./assets/png/twitter.png" alt="">
+            <img src="./assets/png/linkedin.png" alt="">
         </div>  
 	</div>
 </div>
@@ -44,7 +53,7 @@
             
         </div>
         <div class="next">
-            <a href="./shop.php"><button class="explore"><span>Explore more </span></button></a>
+            <a href="./PHP/shop.php"><button class="explore"><span>Explore more </span></button></a>
         </div>
     </div>
 </div>
@@ -60,10 +69,10 @@
             </div>
         </div>    
         <div class="aboutsocial">
-                <img src="../assets/png/instagram.png" alt="">
-                <img src="../assets/png/facebook.png" alt="">
-                <img src="../assets/png/twitter.png" alt="">
-                <img src="../assets/png/linkedin.png" alt="">
+                <img src="./assets/png/instagram.png" alt="">
+                <img src="./assets/png/facebook.png" alt="">
+                <img src="./assets/png/twitter.png" alt="">
+                <img src="./assets/png/linkedin.png" alt="">
             </div>   
 	</div>
 </div>
@@ -75,7 +84,7 @@
         </div>     
             <div class="contactmaincontent">
                 <div class="innercontact" data-aos="fade-right">
-                    <span><img src="../assets/png/address.png" alt=""></span>
+                    <span><img src="./assets/png/address.png" alt=""></span>
                     <h1>ADDRESS</h2>
                     <h2>Welfield Group Contracting</h2>
                     <font>146, Yamuna Street <br> Denver CO 8D223</font>
@@ -83,7 +92,7 @@
                     <font>1270 Automation Drive <br> Windsor CO 8D550</font>
                 </div>
                 <div class="innercontact" data-aos="fade-up">
-                    <span><img src="../assets/png/call.png" alt=""></span>
+                    <span><img src="./assets/png/call.png" alt=""></span>
                     <h1>PHONE</h1>
                     <h2>Welfield Group Contracting</h2>
                     <font>303,428,2011 Phone <br> 303,202,04866 Facsimile</font>
@@ -95,7 +104,7 @@
                     <font>307,218,2012 Phone</font>
                 </div>
                 <div class="innercontact" data-aos="fade-left">
-                    <span><img src="../assets/png/gmail.png" alt=""></span>
+                    <span><img src="./assets/png/gmail.png" alt=""></span>
                     <h1>EMAIL</h1>
                     <h2>Request for proposal</h2>
                     <font>info@iamengineer.com</font>
@@ -145,11 +154,16 @@ function myFunction() {
 <script>
     
 function index(){
-    $.post('shophome.php',function(data,status){
+    $.post('PHP/shophome.php',function(data,status){
         document.getElementsByClassName("imgmaindiv")[0].innerHTML = data;
     })
 }
 index();
+// window.history.forward(); 
+//         function noBack() { 
+//             window.history.forward(); 
+//         } 
+
 </script>
 </body>
 </html>

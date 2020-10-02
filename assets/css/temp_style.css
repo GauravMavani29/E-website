@@ -1,0 +1,49 @@
+body {
+    margin: 0px auto;
+    padding: 0px;
+    box-sizing: border-box;
+    cursor: pointer;
+    scroll-behavior: smooth;
+    animation: fadeInAnimation ease 3s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+    font-family: 'Alice', serif;
+    /* background: linear-gradient(141deg, #0fb834 0%, #db1fac 51%, #b0e82c 75%); */
+}
+
+ @keyframes fadeInAnimation { 
+            0% { 
+                opacity: 0; 
+            } 
+            100% { 
+                opacity: 1; 
+            } 
+        } 
+::-webkit-scrollbar {
+    display: none;
+    /*Safari and Chrome*/
+} 
+
+
+.outerdiv{
+    height: 100vh;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    /*flex-wrap: wrap-reverse;*/
+}
+
+.innerdiv{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: green;
+    margin: 10px 20px;
+}
+
+.outerdiv> :nth-child(4){
+    z-index: 999;
+}

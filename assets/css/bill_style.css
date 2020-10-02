@@ -1,0 +1,122 @@
+body {
+    margin: 0px auto;
+    padding: 0px;
+    box-sizing: border-box;
+    cursor: pointer;
+    scroll-behavior: smooth;
+    animation: fadeInAnimation ease 3s; 
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;
+    font-family: 'Alice', serif;
+    /* background: linear-gradient(141deg, #0fb834 0%, #db1fac 51%, #b0e82c 75%); */
+}
+ @keyframes fadeInAnimation { 
+            0% { 
+                opacity: 0; 
+            } 
+            100% { 
+                opacity: 1; 
+            } 
+        } 
+
+.outdiv{
+    width: 100%;
+    height: 100vh;
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.innerdiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /*background-color: green;*/
+    width: 650px;
+    height: 100vh;
+}
+.bill{
+    box-shadow: 1px 0px 8px 3px rgba(0, 0, 0, 0.4);
+    /*background-color: blue;*/
+    height: 95vh;
+    width: 600px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    border-radius: 8px;
+}
+.imgdiv{
+     display: flex;
+    /*background-color: yellow;*/
+    justify-content: center;
+    padding:7px;
+}
+.imgdiv img{
+    height: 200px;
+    width: 200px;
+    box-shadow: 4px 4px 7px #888888;
+    border-radius: 8px;
+}
+.details{
+    padding:7px;
+}
+h2 {
+    text-align: center;
+    margin:0px;
+    padding: 0px;
+}
+.next {
+    align-self: flex-end;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+}
+
+.explore{
+    background-color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 10px;
+    border:none;
+    color: black;
+    transition: all 0.5s;
+    cursor: pointer;
+    width: 130px;
+    position: relative;
+    filter: invert(100%);
+}
+
+.explore span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.explore span:after {
+  content: '\00ab';
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.explore:hover span {
+  padding-right: 25px;
+}
+
+.explore:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+p{
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+    padding: 2px;
+    margin:10px 0px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}

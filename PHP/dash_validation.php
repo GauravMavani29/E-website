@@ -14,7 +14,7 @@
 	}
 
 	$file_path = $_FILES['image']['tmp_name'];
-	$dest_path = '../assets/images/tshirts/'.$_FILES['image']['name'];
+	$dest_path = 'assets/images/tshirts/'.$_FILES['image']['name'];
 
 	move_uploaded_file($file_path, $dest_path);
 
