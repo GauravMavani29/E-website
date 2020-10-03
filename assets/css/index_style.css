@@ -9,6 +9,7 @@ body {
     animation-fill-mode: forwards;
     font-family: 'Alice', serif;
     /* background: linear-gradient(141deg, #0fb834 0%, #db1fac 51%, #b0e82c 75%); */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
  @keyframes fadeInAnimation { 
             0% { 
@@ -143,7 +144,7 @@ header {
 
 .homeimg{
     background: url("../images/home.jpg") center/cover no-repeat fixed;
-    clip-path: polygon(0% 77%, 60% 0%, 100% 0%, 100% 100%, 0% 100%);
+    /*clip-path: polygon(0% 77%, 60% 0%, 100% 0%, 100% 100%, 0% 100%);*/
     background-size: 100% 100%;
     height: 100vh;
     position: relative;
@@ -153,14 +154,14 @@ header {
     align-items: center;
     display: flex;
     flex-direction: column;
-    width: 420px;
-    height: 250px;
     background-color: rgba(63, 81, 181, 0.4);
     border: 3px solid rgba(255, 255, 255, 0.4);
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 15px #eee;
     margin-left: 40px;
+    width: 420px;
+    height: 250px;
 }
 
 .outdiv h1 {
@@ -217,13 +218,13 @@ header {
     background-color: white;
     background-size: 100% 100%;
     height: 100vh;
-    position: relative;
+    position: sticky;
 }
 
 .shopimg{
     background-size: 100% 100%;
     height: 100vh;
-    position: relative;
+    position: sticky;
 }
 
 .shopoutdiv {
@@ -233,19 +234,20 @@ header {
     top: 0;
     margin-top: 62px;
     height: 90vh;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
 }
 
 .imgmaindiv {
     position: relative;
     height: 65vh;
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
     top: 11%;
+    margin: auto;
 }
 
 .card {
@@ -273,7 +275,7 @@ header {
   cursor: pointer;
   width: 234px;
   font-size: 18px;
-  
+  position: relative;
 }
 .card> :nth-child(4) a{
     background:none;
@@ -313,6 +315,15 @@ header {
 .card> :nth-child(3):hover{
     opacity: 0.7;
 }
+.next {
+    align-self: flex-end;
+    position: relative;
+    margin-right: 40px;
+    margin-top: 110px;
+/*    bottom: 20px;*/
+
+}
+
 .next {
     align-self: flex-end;
     margin-right: 40px;
@@ -490,9 +501,45 @@ header {
     color: white;
 }
 
-/*
-@media only screen and (max-width: 400) and (max-height: 640){
+@media only screen and (min-width: 300px) and (max-width: 640px){
     .outdiv{
-        width: 10px;
+            width: auto;
+            height: auto;
+            margin: 0px 7px;
+            padding: 10px
     }
-}*/
+    .outdiv h1{
+        font-size: 20px;
+    }
+
+    .outdiv h2{
+        font-size: 18px;
+    }
+
+    .outdiv a{
+        font-size: 14px;
+        padding:7px;
+    }
+    .social {
+    width: 125px;
+    }
+
+    .social img {
+        height: 22px;
+        width: 22px;
+        border-radius: 5px;
+    }
+    .imgmaindiv{
+        overflow-y: scroll;
+        height: 80vh;
+        top: 6%;
+        width: 310px;
+    }
+    .price{
+        font-size: 16px;
+        margin: 16px auto;
+    }
+    .card{
+        margin: 4px 0px;
+    }
+}

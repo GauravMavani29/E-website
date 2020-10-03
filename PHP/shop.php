@@ -6,6 +6,7 @@
 	<title>Shopping</title>
 	 <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
 	 <link rel="stylesheet" type="text/css" href="../assets/css/shop_style.css">
+	 <link rel="icon" type="image/png" href="../assets/png/nav-shopping.png"/>
 </head>
 
 <body>

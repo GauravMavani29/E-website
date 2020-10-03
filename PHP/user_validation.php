@@ -35,7 +35,7 @@
 		else{
 			session_start();
 			$_SESSION['user'] = $user;
-			header("location: ./index.php");
+			header("location: ../index.php");
 	}
 }
 ?>

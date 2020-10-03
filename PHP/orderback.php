@@ -14,8 +14,7 @@
 	{
 		$html .= '<div class="card">';
 	    $html .= '<div class="imgdiv">';
-	    $html .= '<img src="./'.$array["Tshirt_image"].'" alt="">';
-	    
+	    $html .= '<img src=../'.$array['Tshirt_image'].' alt="">';
 	    $html .= '</div>';
 	    $html .= '<div class="detailsdiv">';
 	    $html .= '<p><a href="./bill.php?o_id='.$array["order_id"].'">Order Details</a></p>';

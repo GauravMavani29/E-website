@@ -8,9 +8,12 @@
 <html>
 <head>
 	<title>LogIn</title>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<link rel="stylesheet" type="text/css" href="../assets/css/login_create_style.css">
 		<link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
-		<!-- <link rel="icon" type="image/png" href="../assets/images/favicon.ico"/> -->
+		<link rel="icon" type="image/png" href="../assets/png/nav-login.png"/>
 </head>
 <body>
 <?php
@@ -45,7 +48,7 @@
 	else{
 		echo "<script>";
 		echo "if(confirm('You are already log in')){";
-		echo "window.location.href='./index.php';";
+		echo "window.location.href='../index.php';";
 		echo "}</script>";
 	}
 

@@ -2,6 +2,7 @@ body, html {
 	height: 100%;
 	width: 100%;
 	margin: 0px;
+	padding: 0px;
     box-sizing: border-box;
 	cursor: pointer;
 	scroll-behavior: smooth;
@@ -27,17 +28,18 @@ body, html {
 
 /*loginbackground*/
 .lg_bg{
-	background-image: url("../images/login.jpg");
-	background-color: rgba(255, 255, 255,0.4);
+	background: url("../images/login.jpg");
+	/*background-color: rgba(255, 255, 255,0.4);*/
 	height: 100vh;
 	width: 100%;
 	background-position: center;	
 	background-repeat: no-repeat;
 	background-size: cover;
-	position: absolute;
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-shrink: 1;
 }
 
 /*Maindiv*/
@@ -52,6 +54,7 @@ body, html {
 	position: absolute;
 	border-radius: 18px;
 	border:0.5px solid rgba(153, 153, 153, 0.2);
+	flex-shrink: 1;	
 }
 
 /*login form*/
@@ -139,3 +142,8 @@ input[type=submit]:hover {
 	color: purple;
 }
 
+@media only screen and (min-width: 300px) and (max-width: 640px){
+            .Maindiv{
+                margin: 0px;
+            }
+        }

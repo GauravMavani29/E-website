@@ -14,7 +14,7 @@ error_reporting(0);
 
 
 		$html .= '<div class="proimg">';
-		$html .= '<img src=../'.$array['tshirt_image'].' id="pimg" alt="">';
+		$html .= '<img src=../'.$array["tshirt_image"].' id="pimg" alt="">';
 		$html .= '</div>';
 		$html .= '<div class="product">';
 		$html .= '<div class="proinfo">';

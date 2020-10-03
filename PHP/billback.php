@@ -11,7 +11,7 @@
 
 		$html .= '<div class="bill">';
 		$html .= '<div class="imgdiv">';
-		$html .= '<img src="./'.$array["Tshirt_image"].'" alt="">';
+		$html .= '<img src=../'.$array['Tshirt_image'].' alt="">';
 		$html .= '</div>';
 		$html .= '<div class="details">';
 		$html .= '<h2>Order Details</h2>';
