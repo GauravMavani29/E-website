@@ -11,23 +11,24 @@
     <link rel="icon" type="image/png" href="./assets/png/nav-home.png"/>
     
 </head>
-<body>
+<body>  
 <header>
-    <div class="headerdiv">
-        <div>I_am_engineer_co</div>
+    <div class="headerdiv"  id="menu">
+        <div id="head">I_am_engineer_co</div>
         <div class="headerele selected"><a href="#1">Home</a></div>
         <div class="headerele"><a href="#2">Shop</a></div>
         <div class="headerele"><a href="#3">About Us</a></div>
         <div class="headerele"><a href="#4">Contact Us</a></div>
         <div  class="dropdown">
-            <div class="headerele dropdown"><a href="./PHP/login.php" class="">LogIn <i class="fa fa-caret-down"></i></a>
-            <div class="dropdown-content">
-                 <a href="./PHP/logout.php">LogOut</a>
+                <div class="headerele dropdown"><a href="./PHP/login.php" class="">LogIn <i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                     <a href="./PHP/logout.php">LogOut</a>
+                </div>
             </div>
         </div>
-    </div>
         <div class="headerele"><a href="./PHP/order.php">Orders</a></div>    
         <div class="headerele"><a href="./PHP/cart.php"><img src="./assets/png/cart.png" alt="Could'n find"></a></div>
+        <div class="navmenu"><img src="./assets/png/menu.png" alt="Could'n find" onclick="navbar()"></div>
     </div>
     <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
@@ -60,15 +61,12 @@
     </div>
 </div>
 <div class="about" id="3">
-    <img src="../assets/images/about.jpg" alt="">
     <div class="aboutimg"></div>
     <div class="aboutmain">
         <div class="aboutmaincontent" data-aos="zoom-out" data-aos-duration="1000">
-            <div>
-                We bring you the trendiest and most exclusive brands from around the world to your wardrobe. Forget scouring the net for what’s hot globally, we’ve got you  covered.<br><br>
-                Why let a world that loves to police your wardrobe and your exression get the upper hand, anyway?<br><br>
-                Our daily trend spotlight that lets you in on what’s hip and happening, and what you should be carting right now. Like they say, a trend each day keeps the blues away!
-            </div>
+             <p>We bring you the trendiest and most exclusive brands from around the world to your wardrobe. Forget scouring the net for what’s hot globally, we’ve got you  covered.</p>
+                <p>Why let a world that loves to police your wardrobe and your exression get the upper hand, anyway?</p>
+               <p>Our daily trend spotlight that lets you in on what’s hip and happening, and what you should be carting right now. Like they say, a trend each day keeps the blues away!</p>
         </div>    
         <div class="aboutsocial">
                 <img src="./assets/png/instagram.png" alt="">
@@ -79,7 +77,7 @@
 	</div>
 </div>
 <div class="contact" id="4">
-    <div class="contactimg"></div>
+    <!-- <div class="contactimg"></div> -->
     <div class="contactoutdiv">
         <div>
             <h1 class="getin">GET IN TOUCH</h1>
@@ -105,7 +103,7 @@
                     <h2>Wyoming Office</h2>
                     <font>307,218,2012 Phone</font>
                 </div>
-                <div class="innercontact" data-aos="fade-left">
+                <div class="innercontact "data-aos="fade-left">
                     <span><img src="./assets/png/gmail.png" alt=""></span>
                     <h1>EMAIL</h1>
                     <h2>Request for proposal</h2>
@@ -132,7 +130,6 @@ function myFunction() {
 </script>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
-
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -141,9 +138,6 @@ function myFunction() {
         easing: 'ease-out-back',
         duration: 1000
     });
-</script>
-
-<script>
     hljs.initHighlightingOnLoad();
 
     $('.hero__scroll').on('click', function(e) {
@@ -165,6 +159,42 @@ index();
 //         function noBack() { 
 //             window.history.forward(); 
 //         } 
+</script>
+<script>
+    function navbar(){
+        var elems = document.getElementsByClassName("headerele");
+        
+            if((elems[0].style.visibility != 'visible') & (document.getElementById("menu").style.flexDirection != 'column')) {
+                    for (var i=0; i<elems.length; i++){
+                    document.getElementById("menu").style.flexDirection = 'column';     
+                    elems[i].style.visibility = 'visible';
+                    document.getElementById("head").style.visibility = 'hidden';
+                    document.getElementById("menu").style.animation = 'fadeInAnimation ease 2s';
+                    document.getElementById("menu").style.animationIterationCount = '1';
+                    document.getElementById("menu").style.animationFillMode = 'forwards';
+                }
+            }
+            else if((elems[0].style.visibility != 'hidden') & (document.getElementById("menu").style.flexDirection != 'row')){
+                for (var i=0; i<elems.length; i++){
+                    document.getElementById("menu").style.flexDirection = 'row';     
+                    elems[i].style.visibility = 'hidden';
+                    document.getElementById("head").style.visibility = 'visible';
+                }
+            }
+
+            $('.headerele').on('click', function(e){
+        var elems = document.getElementsByClassName("headerele");
+        if((elems[0].style.visibility != 'hidden') & (document.getElementById("menu").style.flexDirection != 'row')){
+                for (var i=0; i<elems.length; i++){
+
+                    document.getElementById("menu").style.flexDirection = 'row';     
+                    elems[i].style.visibility = 'hidden';
+                    document.getElementById("head").style.visibility = 'visible';
+                }
+            }
+    })
+}
+
 
 </script>
 </body>

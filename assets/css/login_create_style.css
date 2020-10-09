@@ -144,6 +144,12 @@ input[type=submit]:hover {
 
 @media only screen and (min-width: 300px) and (max-width: 640px){
             .Maindiv{
-                margin: 0px;
+                margin: 0px 4px;
             }
         }
+@media only screen and (min-width: 280px) and (max-width: 300px){
+    .Maindiv{
+        margin: 0px 4px;
+        padding: 20px 20px;
+    }
+}

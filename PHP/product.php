@@ -4,7 +4,10 @@ $t_id = $_GET['t_id'];
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Details</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../assets/css/product_style.css">
 
@@ -14,9 +17,17 @@ $t_id = $_GET['t_id'];
 		<div class="outdiv">
 			
 		</div>
+		
 	</div>
+	<div class="next">
+            <button class="explore" onclick="home()"><span>Back</span></button>
+    </div>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script>
+function home(){
+    window.location.href="./cart.php";
+}
+
 	function explore(){
 		$.post("productback.php",{tshirt_id:<?php echo $t_id; ?>}, function(data,status){
 			document.getElementsByClassName("outdiv")[0].innerHTML = data;

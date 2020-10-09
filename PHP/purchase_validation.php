@@ -11,6 +11,7 @@ error_reporting(0);
 			$todo+=1;
 		}
 
+		$quantity = $_POST['quantity'];
 		$size = $_POST['size'];
 		if(!isset($_POST['size'])){
 			$sizeerr = "Select atleast one ";

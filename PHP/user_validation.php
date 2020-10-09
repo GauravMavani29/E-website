@@ -6,21 +6,21 @@
 	$error = "";
 	if(!ctype_alpha($name)){
 		$error = "Name contain only alphabets";
-		header("location: ./createuser.php?name_err=$error");
+		header("location: ./createuser.php?name_err=$error & user=$user & pass=$pass");
 	} 
 	elseif(!ctype_alnum($user)){
-		$error = "UserId contain only alphanumeric";
-		header("location: ./createuser.php?user_err=$error & name=$name");
+		$usererror = "UserId contain only alphanumeric";
+		header("location: ./createuser.php?user_err=$usererror & name=$name & pass=$pass");
 	}
 	elseif(strlen($pass) < 8)
 	{
-		$error = "Password contain greater than 8 character";
-		header("location: ./createuser.php?pass_err=$error & name=$name & user=$user");
+		$passerror = "Password contain greater than 8 character";
+		header("location: ./createuser.php?pass_err=$passerror & name=$name & user=$user");
 	}
-	elseif($pass != $repass)
+	elseif($repass != $repass)
 	{
 		$error = "Password is not matched";
-		header("location: ./createuser.php?repass_err=$error & name=$name & user=$user & pass=$pass");
+		header("location: ./createuser.php?repass_err=$reerror & name=$name & user=$user & pass=$pass");
 	}
 	else{
 		include "./db_connection.php";

@@ -8,7 +8,7 @@
 	$query = mysqli_query($con,$sql)or die("error:".mysqli_error($query));
 	$html = "";
 	while($array = mysqli_fetch_assoc($query)){
-		$html .= '<div class="card">';
+		$html .= '<div class="card" data-aos="flip-left" data-aos-duration="1200">';
 		$html .= '<div class="imgdiv">';
 		$html .= '<img src=../'.$array["tshirt_image"].' alt="">';
 		$html .= '</div>';

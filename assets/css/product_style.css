@@ -9,8 +9,54 @@ body{
     animation: fadeInAnimation ease 3s; 
     animation-iteration-count: 1; 
     animation-fill-mode: forwards;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.next {
+    align-self: flex-end;
+    /*margin:100px 40px 17px auto;*/
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
 }
 
+.explore{
+    background-color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 10px;
+    border:none;
+    color: black;
+    transition: all 0.5s;
+    cursor: pointer;
+    width: 150px;
+    position: relative;
+    filter: invert(100%);
+}
+
+.explore span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.explore span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.explore:hover span {
+  padding-right: 25px;
+}
+
+.explore:hover span:after {
+  opacity: 1;
+  right: 0;
+}
  @keyframes fadeInAnimation { 
             0% { 
                 opacity: 0; 
@@ -66,7 +112,7 @@ body{
 	border-radius: 10px;
 	color: black;
 	margin: 20px;
-	width: 700px;
+	/*width: 700px;*/
 	box-shadow: 1px 0px 8px 3px rgba(0, 0, 0, 0.4);
 	overflow-y: scroll;
 	padding-bottom: 15px;
@@ -97,3 +143,19 @@ body{
 	opacity: 0.7;
 }
 
+@media only screen and (min-width: 280px) and (max-width: 950px){
+	.proimg{
+		padding: 0px;
+	}
+	.proimg img{
+		height: 250px;
+		width: 250px;
+	}
+	.head{
+		padding: auto;
+	}
+	.product{
+		padding: 8px;
+		margin: 5px;
+	}
+}

@@ -23,7 +23,7 @@
 						</div>
 						<div class="input">
 							<label>Quantity</label>
-							<input type="number" name="quantity" placeholder="Quantity" min="1" onchange="cal()" id="quantity" required>
+							<input type="number" name="quantity" placeholder="Quantity" min="1" onchange="cal()" id="quantity"  value="<?php echo $quantity; ?>" required>
 						</div>
 						<div class="input">
 							<label>Total</label>

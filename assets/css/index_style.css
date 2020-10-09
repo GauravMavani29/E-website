@@ -34,7 +34,7 @@ header {
     top: 0;
     left: 0;
     z-index: 9999;
-    width: 100%;
+    width: 100vw;
 }
 
 .headerdiv {
@@ -43,9 +43,11 @@ header {
     justify-content: flex-end;
     flex-direction: row;
     padding: 10px 0px;
+    transition: 0.5s;
 }
 
 .headerele {
+    position: relative;
     padding: 4px 22px;
     font-size: 18px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.0);
@@ -53,13 +55,66 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    visibility: visible;
 }
 
 .headerele a {
     color: rgb(255, 255, 255);
     text-decoration: none;
+    transition: 0.5s;
 }
 
+.headerele a:before{
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #3498db;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+}
+
+.headerele a:after{
+    position: absolute;
+    content: "";
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #3498db;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+}
+
+.headerele a:hover {
+        color: rgb(255, 251, 29);
+      }
+
+.headerele a:hover:after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+.headerele a:hover:before {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+/*#head:before{
+    position: absolute;
+    background:url("../png/facebook.png") no-repeat;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    content: "";
+    display: block;  
+    float: left;
+    margin: 0px 6px 0px 0px;
+    z-index: -1;
+}*/
 .headerdiv> :nth-child(1) {
     position: absolute;
     align-self: flex-start;
@@ -67,16 +122,6 @@ header {
     top: 10px;
     font-size: 25px;
 }
-
-.headerele:hover {
-    border-bottom: 1px solid rgb(255, 255, 255);
-    transition: 0.75s;
-}
-
-.headerele a:hover {
-    color: rgb(255, 251, 29);
-}
-
 .headerele a img {
     align-self: flex-end;
     margin-top: 8px;
@@ -90,7 +135,7 @@ header {
   display: none;
   background-color: rgba(0, 0, 53, 0.8);
   position: absolute;
-  top: 42px;
+  top: 32px;
   min-width: 100px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -109,6 +154,17 @@ header {
   display: block;
   color: yellow;
 
+}
+
+.navmenu{
+    padding: 4px 22px;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0);
+    height: 22px;
+    justify-content: center;
+    align-items: center;
+    filter: invert(100%);
+    display: none;    
 }
 /* progress bar */
 
@@ -135,7 +191,6 @@ header {
     position: relative;
     background-size: 100% 100%;
     background-position: center;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -173,7 +228,7 @@ header {
 .outdiv h2 {
     padding: 10px;
     margin: 0px;
-    color: #9E9E9E;
+    color: #cccccc;
     font-size: 22px;
 }
 
@@ -315,19 +370,10 @@ header {
 .card> :nth-child(3):hover{
     opacity: 0.7;
 }
-.next {
-    align-self: flex-end;
-    position: relative;
-    margin-right: 40px;
-    margin-top: 110px;
-/*    bottom: 20px;*/
-
-}
 
 .next {
     align-self: flex-end;
-    margin-right: 40px;
-    margin-top: 110px;
+    margin:100px 40px 17px auto;
 }
 
 .explore{
@@ -413,8 +459,11 @@ header {
     font-size: 22px;
     border-radius: 15px;
     box-shadow: 6px 6px 3px #000000;
+    overflow-y: scroll;
 }
-
+.aboutmaincontent p{
+    margin: 10px 5px;
+}
 .aboutsocial {
     position: absolute;
     top: 88.5vh;
@@ -437,35 +486,28 @@ header {
 /* contact us page */
 
 .contact {
-    background-color: black;
+    background: url("../images/contact.jpg") fixed;
     background-size: 100% 100%;
     height: 100vh;
+    background-size: 100% 100%;
     position: relative; 
-    background-color: black;
-    background-size: 100% 100%;
     background-position: center;
-    height: 100vh;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
 }
-
-.contactimg{
-    background: url("../images/contact.jpg") center/cover no-repeat fixed;
-    /*clip-path: polygon(0 17%, 100% 17%, 100% 100%, 0% 100%);*/
-    background-size: 100% 100%;
-    height: 100vh;
-    position: relative;
-}
-
 
 .contactoutdiv {
     position: absolute;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     top: 0;
-    height: 90%;
-    margin-top: 50px;
-    left: 200px;
+    margin-top: 40px;
     padding-top: 15px;
+    width: 100%;
 }
 
 .getin {
@@ -476,9 +518,15 @@ header {
 }
 
 .contactmaincontact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    position: absolute;
+    height: 65vh;
+    display:inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    top: 11%;
+    margin: 0px;
 }
 
 .innercontact {
@@ -489,6 +537,7 @@ header {
     text-align: center;
     padding: 12px 4px;
     border-radius: 15px;
+    margin: auto;
 }
 
 .innercontact img {
@@ -501,7 +550,7 @@ header {
     color: white;
 }
 
-@media only screen and (min-width: 300px) and (max-width: 640px){
+@media only screen and (min-width: 300px) and (max-width: 950px){
     .outdiv{
             width: auto;
             height: auto;
@@ -509,7 +558,7 @@ header {
             padding: 10px
     }
     .outdiv h1{
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .outdiv h2{
@@ -517,7 +566,7 @@ header {
     }
 
     .outdiv a{
-        font-size: 14px;
+        font-size: 12px;
         padding:7px;
     }
     .social {
@@ -529,17 +578,148 @@ header {
         width: 22px;
         border-radius: 5px;
     }
-    .imgmaindiv{
+}
+
+@media only screen and (min-width: 280px) and (max-width: 300px)
+{
+    .outdiv{
+            width: auto;
+            height: auto;
+            margin: 0px 7px;
+            padding: 10px
+    }
+    .outdiv h1{
+        font-size: 15px;
+    }
+
+    .outdiv h2{
+        font-size: 12px;
+    }
+
+    .outdiv a{
+        font-size: 10px;
+        padding:7px;
+    }
+    .social {
+    width: 125px;
+    }
+
+    .social img {
+        height: 22px;
+        width: 22px;
+        border-radius: 5px;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 950px){
+    .headerele{
+            visibility: hidden;
+        }
+    .navmenu{
+        display: block;
+    }
+    .headerdiv{
+        transition: 0.4s;
+    }
+    .headerdiv> :nth-child(1){
+        font-size: 20px;
+        left: 20px;
+        top: 14px;
+    }
+    .dropdown-content{
+        top:160px;
+    }
+
+   .imgmaindiv{
         overflow-y: scroll;
-        height: 80vh;
-        top: 6%;
-        width: 310px;
+        height: 100vh;
+        top: 0%;
+        width: 270px;
+        margin: 0px;
+        padding: 0px;
     }
     .price{
         font-size: 16px;
         margin: 16px auto;
     }
     .card{
-        margin: 4px 0px;
+        margin: 15px 0px;
+    }
+    .next{
+        margin: 12px 4px;
+    }
+    .aboutmaincontent{
+        padding: 20px;
+        font-size: 16px;
+        width: 400px;
+    }
+    .shopoutdiv{
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 900px){
+    .aboutmaincontent{
+        padding: 20px;
+        font-size: 16px;
+        width: 400px;
+    }
+    .aboutsocial{
+        width: 150px;
+        margin: auto 3px;
+        left: -22vw;
+    }
+    .aboutsocial img{
+        height: 26px;
+        width: 26px;
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 550px){
+    .aboutmaincontent{
+        padding: 5px;
+        font-size: 12px;
+        width: 275px;
+        box-shadow: 3px 3px 1px #000000;
+    }
+    .aboutsocial{
+        width: 120px;
+        margin: auto 6px;
+        left: -22vw;
+    }
+    .aboutsocial img{
+        height: 22px;
+        width: 22px;
+    }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 990px){
+    .innercontact{
+        padding:8px 2px;
+        border-radius: 10px;
+        width: 200px;
+    }
+    .innercontact img{
+        height: 35px;
+        width: 35px;
+    }
+    .innercontact h1 {
+        font-size: 26px;
+    }
+}
+@media only screen and (min-width: 280px) and (max-width: 650px){
+    .innercontact{
+        padding:8px 2px;
+        border-radius: 8px;
+        display: flex;
+        margin: 7px 5px;
+    }
+    .innercontact img{
+        height: 25px;
+        width: 25px;
+    }
+    .innercontact h1 {
+        font-size: 20px;
     }
 }

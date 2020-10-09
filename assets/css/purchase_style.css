@@ -25,12 +25,13 @@ body,html {
 .maindiv{
     /*background-color: black;*/
     background: url("../images/purchase1.jpg") center/cover no-repeat fixed;
-    margin: 0px;
+    margin: auto;
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    overflow-y: scroll;
 }
 h1{
     color: white;
@@ -40,9 +41,10 @@ h1{
 }
 .outerdiv{
     display: inline-block;
-    margin: 0px;
+    margin: auto;
     padding-top: 25px;
     /*justify-content: center;*/
+    
 }
 .innerdiv{
     display: flex;
@@ -166,4 +168,31 @@ select{
     margin-bottom: 7px;
     display: flex;
     flex-direction: column;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 600px){
+    form{
+        flex-direction: column;
+        padding: auto;
+    }
+    .innerdiv{
+        margin: 5px 2px;
+        padding: 5px;
+    }
+ 
+}
+@media only screen and (min-width: 280px) and (max-width: 300px){
+       .outerdiv{
+        width: 270px;
+    }
+
+    form{
+        flex-direction: column;
+        width: 265px;
+        padding: auto;
+    }
+    .innerdiv{
+        margin: 6px 2px;
+        padding: 7px;
+    }
 }

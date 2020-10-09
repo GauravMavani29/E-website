@@ -8,7 +8,7 @@
 	$i = 0;
 	while($array = mysqli_fetch_assoc($query)){
 		if($i<4){
-			$html .= '<div class="card">';
+			$html .= '<div class="card" data-aos="flip-left" data-aos-duration="1200">';
             $html .= '<img src='.$array["tshirt_image"].' alt="T-shirt" style="width:100%">';
             $html .= '<p class="price">$'.$array["tshirt_price"].'</p>';
             $html .= '<p><a href="./PHP/product.php?t_id='.$array["tshirt_id"].'">Explore</a></p>';
