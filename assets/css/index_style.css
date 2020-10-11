@@ -68,7 +68,7 @@ header {
     position: absolute;
     content: "";
     top: 100%;
-    left: 0;
+    left: 0;    
     width: 100%;
     height: 3px;
     background: #3498db;
@@ -77,18 +77,6 @@ header {
     transition: transform 0.3s;
 }
 
-.headerele a:after{
-    position: absolute;
-    content: "";
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: #3498db;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s;
-}
 
 .headerele a:hover {
         color: rgb(255, 251, 29);
@@ -103,18 +91,6 @@ header {
         transform-origin: left;
       }
 
-/*#head:before{
-    position: absolute;
-    background:url("../png/facebook.png") no-repeat;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    content: "";
-    display: block;  
-    float: left;
-    margin: 0px 6px 0px 0px;
-    z-index: -1;
-}*/
 .headerdiv> :nth-child(1) {
     position: absolute;
     align-self: flex-start;
@@ -374,6 +350,7 @@ header {
 .next {
     align-self: flex-end;
     margin:100px 40px 17px auto;
+
 }
 
 .explore{
@@ -388,6 +365,7 @@ header {
     width: 150px;
     position: relative;
     filter: invert(100%);
+    outline: none;
 }
 
 .explore span {

@@ -25,7 +25,7 @@ $t_id = $_GET['t_id'];
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script>
 function home(){
-    window.location.href="./cart.php";
+    window.location.href="../index.php";
 }
 
 	function explore(){

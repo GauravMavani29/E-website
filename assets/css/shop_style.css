@@ -131,6 +131,7 @@
     width: 150px;
     position: relative;
     filter: invert(100%);
+    outline: none;
 }
 
 .explore span {

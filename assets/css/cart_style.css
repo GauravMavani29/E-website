@@ -109,6 +109,7 @@ body {
     position: relative;
     filter: invert(100%);
     margin: 10px 0px;
+    outline: none;
 }
 
 .explore span {
