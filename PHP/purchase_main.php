@@ -4,6 +4,7 @@
 	session_start();
 	$user = $_SESSION['user'];
 
+	
 	$t_id = $_GET['t_id'];
 	$sql = "select `tshirt_size`, `tshirt_price`, `tshirt_image` from `add_product` where tshirt_id = $t_id;";
 
@@ -14,8 +15,8 @@
 	$size = explode(" ", $array["tshirt_size"]);
 
 	$price = $array["tshirt_price"];
-
-	$image = $array["tshirt_image"];
+	
+	$image = substr($array["tshirt_image"],3);
 	
 ?>
 <!DOCTYPE html>

@@ -1,3 +1,13 @@
+<?php 
+error_reporting(0);
+session_start();
+if($_SESSION['user']){
+    $username = $_SESSION['user'];
+}
+else{
+    $username = "";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +21,7 @@
     <link rel="icon" type="image/png" href="./assets/png/nav-home.png"/>
     
 </head>
-<body>  
+<body id="bodydiv">  
 <header>
     <div class="headerdiv"  id="menu">
         <div id="head">I_am_engineer_co</div>
@@ -28,6 +38,8 @@
         </div>
         <div class="headerele"><a href="./PHP/order.php">Orders</a></div>    
         <div class="headerele"><a href="./PHP/cart.php"><img src="./assets/png/cart.png" alt="Could'n find"></a></div>
+        <div class="headerele" id="user"><?PHP echo $username; ?>
+              </div>
         <div class="navmenu"><img src="./assets/png/menu.png" alt="Could'n find" onclick="navbar()"></div>
     </div>
     <div class="progress-container">
@@ -46,14 +58,13 @@
             <img src="./assets/png/twitter.png" alt="">
             <img src="./assets/png/linkedin.png" alt="">
         </div>  
-	</div>
+    </div>
 </div>
-
 <div class="shop" id="2">
     <div class="shopimg"></div>
     <div class="shopoutdiv">
         <div class="imgmaindiv">
-            
+
         </div>
         <div class="next">
             <a href="./PHP/shop.php"><button class="explore"><span>Explore more </span></button></a>
@@ -74,7 +85,7 @@
                 <img src="./assets/png/twitter.png" alt="">
                 <img src="./assets/png/linkedin.png" alt="">
             </div>   
-	</div>
+    </div>
 </div>
 <div class="contact" id="4">
     <!-- <div class="contactimg"></div> -->
@@ -116,11 +127,13 @@
             </div>
     </div>
 </div>
-
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="javascript/index.js"></script>
 <script>
 // When the user scrolls the page, execute myFunction 
 window.onscroll = function() {myFunction()};
-
 function myFunction() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -128,25 +141,23 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 }
 </script>
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
 <script>
     AOS.init({
         easing: 'ease-out-back',
         duration: 1000
     });
     hljs.initHighlightingOnLoad();
-
     $('.hero__scroll').on('click', function(e) {
         $('html, body').animate({
             scrollTop: $(window).height()
         }, 1200);
     });
 </script>
-
 <script>
     
 function index(){
@@ -181,12 +192,10 @@ index();
                     document.getElementById("head").style.visibility = 'visible';
                 }
             }
-
             $('.headerele').on('click', function(e){
         var elems = document.getElementsByClassName("headerele");
         if((elems[0].style.visibility != 'hidden') & (document.getElementById("menu").style.flexDirection != 'row')){
                 for (var i=0; i<elems.length; i++){
-
                     document.getElementById("menu").style.flexDirection = 'row';     
                     elems[i].style.visibility = 'hidden';
                     document.getElementById("head").style.visibility = 'visible';
@@ -194,8 +203,6 @@ index();
             }
     })
 }
-
-
 </script>
 </body>
 </html>

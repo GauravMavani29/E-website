@@ -27,7 +27,7 @@
 						</div>
 						<div class="input">
 							<label>Total</label>
-							<input type="text" name="total" placeholder="Total" id="total">
+							<input type="text" name="total" placeholder="Total" id="total" required  value="<?php echo $total; ?>" disabled>
 						</div>
 						<div class="input">
 							<label>Method &nbsp;&nbsp;<span><?php echo $methoderr; ?></span></label>
@@ -40,7 +40,7 @@
 							
 						</div>
 						<div class="input">
-							<label>Address &nbsp;&nbsp;<span><?php echo $adderr; ?></span></label>
+							<label>Street Address &nbsp;&nbsp;<span><?php echo $adderr; ?></span></label>
 		  					 <textarea id="address" name="address" placeholder="Write Address.." style="height:80px"><?php echo $newadd; ?></textarea>
 						</div>
 						<div class="input">

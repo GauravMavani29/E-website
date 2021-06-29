@@ -12,13 +12,13 @@ error_reporting(0);
 
 	$html = "";
 
-
+		//$temp = substr($array["tshirt_image"],3);
 		$html .= '<div class="proimg">';
 		$html .= '<img src=../'.$array["tshirt_image"].' id="pimg" alt="">';
 		$html .= '</div>';
 		$html .= '<div class="product">';
 		$html .= '<div class="proinfo">';
-		$html .= '<h1 id="heading" class="head">'.$array["tshirt_title"].'</h2> ';
+		$html .= '<h1 id="heading" class="head">'.$array["tshirt_title"].'</h1> ';
 		$html .= '<p>';
 		$html .= '<b>SIZE&nbsp;:</b><font>&nbsp;&nbsp;&nbsp;'. $array["tshirt_size"] .'</font>';
 		$html .= '</p>';

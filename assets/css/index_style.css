@@ -1,28 +1,30 @@
-body {
+    body {
     margin: 0px auto;
     padding: 0px;
     box-sizing: border-box;
     cursor: pointer;
     scroll-behavior: smooth;
-    animation: fadeInAnimation ease 3s; 
-    animation-iteration-count: 1; 
+    /*animation: fadeInAnimation ease 2s; */
+    animation-iteration-count: 1;
     animation-fill-mode: forwards;
     font-family: 'Alice', serif;
     /* background: linear-gradient(141deg, #0fb834 0%, #db1fac 51%, #b0e82c 75%); */
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
- @keyframes fadeInAnimation { 
-            0% { 
-                opacity: 0; 
-            } 
-            100% { 
-                opacity: 1; 
-            } 
-        } 
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 ::-webkit-scrollbar {
     display: none;
     /*Safari and Chrome*/
-} 
+}
 
 
 /* navbar */
@@ -64,32 +66,32 @@ header {
     transition: 0.5s;
 }
 
-.headerele a:before{
+.headerele a:before {
     position: absolute;
     content: "";
     top: 100%;
-    left: 0;    
+    left: 0;
     width: 100%;
     height: 3px;
-    background: #3498db;
+    background: white;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s;
 }
 
-
 .headerele a:hover {
-        color: rgb(255, 251, 29);
-      }
+    color: rgb(255, 251, 29);
+}
 
-.headerele a:hover:after {
-        transform: scaleX(1);
-        transform-origin: left;
-      }
+/*.headerele a:hover:after {
+    transform: scaleX(1);
+    transform-origin: left;
+}*/
+
 .headerele a:hover:before {
-        transform: scaleX(1);
-        transform-origin: left;
-      }
+    transform: scaleX(1);
+    transform-origin: left;
+}
 
 .headerdiv> :nth-child(1) {
     position: absolute;
@@ -98,6 +100,7 @@ header {
     top: 10px;
     font-size: 25px;
 }
+
 .headerele a img {
     align-self: flex-end;
     margin-top: 8px;
@@ -107,32 +110,35 @@ header {
     border: none;
 }
 
+#user{
+    color: yellow;
+}
+
 .dropdown-content {
-  display: none;
-  background-color: rgba(0, 0, 53, 0.8);
-  position: absolute;
-  top: 32px;
-  min-width: 100px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+    display: none;
+    background-color: rgba(0, 0, 53, 0.8);
+    position: absolute;
+    top: 32px;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .dropdown-content a {
-  color: white;
-  float: none;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+    color: white;
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
-  color: yellow;
-
+    display: block;
+    color: yellow;
 }
 
-.navmenu{
+.navmenu {
     padding: 4px 22px;
     font-size: 18px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.0);
@@ -140,15 +146,17 @@ header {
     justify-content: center;
     align-items: center;
     filter: invert(100%);
-    display: none;    
+    display: none;
 }
+
+
 /* progress bar */
 
 .progress-container {
     width: 100%;
     height: 4px;
-    background: #ccc;
-    box-shadow: 3px 3px 2px rgb(143, 143, 143);
+    background: white;
+    box-shadow: 2px 2px 1px grey;
 }
 
 .progress-bar {
@@ -162,7 +170,7 @@ header {
 
 .home {
     /*background: url("../images/home.jpg") center/cover no-repeat fixed;*/
-    background-color: black;
+    background: black;
     height: 100vh;
     position: relative;
     background-size: 100% 100%;
@@ -173,13 +181,14 @@ header {
     transition: 0.7s;
 }
 
-.homeimg{
+.homeimg {
     background: url("../images/home.jpg") center/cover no-repeat fixed;
     /*clip-path: polygon(0% 77%, 60% 0%, 100% 0%, 100% 100%, 0% 100%);*/
     background-size: 100% 100%;
     height: 100vh;
     position: relative;
 }
+
 .outdiv {
     position: absolute;
     align-items: center;
@@ -223,8 +232,8 @@ header {
     box-shadow: 0 0 17px #eee;
 }
 
-.btn:hover{
-      background-position: right center; 
+.btn:hover {
+    background-position: right center;
 }
 
 .social {
@@ -252,7 +261,7 @@ header {
     position: sticky;
 }
 
-.shopimg{
+.shopimg {
     background-size: 100% 100%;
     height: 100vh;
     position: sticky;
@@ -282,83 +291,88 @@ header {
 }
 
 .card {
-  box-shadow: 1px 0px 8px 3px rgba(0, 0, 0, 0.4);
-  max-width: 250px;
-  margin: auto;
-  text-align: center;
+    box-shadow: 1px 0px 8px 3px rgba(0, 0, 0, 0.4);
+    max-width: 250px;
+    margin: auto;
+    text-align: center;
 }
 
-.card> :nth-child(1):hover{
+.card> :nth-child(1):hover {
     opacity: 0.7;
 }
+
 .price {
-  color: grey;
-  font-size: 22px;
+    color: grey;
+    font-size: 22px;
 }
 
-.card> :nth-child(4), .card> :nth-child(3){
-  border: none;
-  outline: 0;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 234px;
-  font-size: 18px;
-  position: relative;
+.card> :nth-child(4),
+.card> :nth-child(3) {
+    border: none;
+    outline: 0;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 234px;
+    font-size: 18px;
+    position: relative;
 }
-.card> :nth-child(4) a{
-    background:none;
+
+.card> :nth-child(4) a {
+    background: none;
     text-decoration: none;
     color: white;
-    border:none;
+    border: none;
     font-size: 17px;
     font-family: 'Alice', serif;
     position: absolute;
     margin: 6px 0px;
-    right:78px;
+    right: 78px;
     transition: 0.5s;
 }
-.card> :nth-child(4) img{
+
+.card> :nth-child(4) img {
     margin-right: 120px;
     opacity: 0;
     transition: 0.5s;
 }
- .card> :nth-child(3) a{
-    background:none;
+
+.card> :nth-child(3) a {
+    background: none;
     text-decoration: none;
     color: white;
-    border:none;
+    border: none;
     font-size: 17px;
     font-family: 'Alice', serif;
- }
-
-.card> :nth-child(4):hover a{
-  padding-right: 85px;
-  right: 0;
 }
 
-.card> :nth-child(4):hover img{
-      opacity: 1;
-      padding-right: 25px;
+.card> :nth-child(4):hover a {
+    padding-right: 85px;
+    right: 0;
 }
-.card> :nth-child(3):hover{
+
+.card> :nth-child(4):hover img {
+    opacity: 1;
+    padding-right: 25px;
+}
+
+.card> :nth-child(3):hover {
     opacity: 0.7;
 }
 
 .next {
     align-self: flex-end;
-    margin:100px 40px 17px auto;
-
+    margin: 100px 40px 17px auto;
 }
 
-.explore{
+.explore {
     background-color: white;
     font-size: 15px;
     border-radius: 10px;
     padding: 10px;
-    border:none;
+    border: none;
     color: black;
     transition: all 0.5s;
     cursor: pointer;
@@ -369,29 +383,31 @@ header {
 }
 
 .explore span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
 }
 
 .explore span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
 }
 
 .explore:hover span {
-  padding-right: 25px;
+    padding-right: 25px;
 }
 
 .explore:hover span:after {
-  opacity: 1;
-  right: 0;
+    opacity: 1;
+    right: 0;
 }
+
+
 /* about us page */
 
 .about {
@@ -400,13 +416,12 @@ header {
     position: relative;
 }
 
-.aboutimg{
+.aboutimg {
     background: url("../images/about.jpg") center/cover no-repeat fixed;
     background-size: 100% 100%;
     height: 100vh;
     position: relative;
 }
-
 
 .aboutmain {
     position: absolute;
@@ -439,9 +454,11 @@ header {
     box-shadow: 6px 6px 3px #000000;
     overflow-y: scroll;
 }
-.aboutmaincontent p{
+
+.aboutmaincontent p {
     margin: 10px 5px;
 }
+
 .aboutsocial {
     position: absolute;
     top: 88.5vh;
@@ -468,7 +485,7 @@ header {
     background-size: 100% 100%;
     height: 100vh;
     background-size: 100% 100%;
-    position: relative; 
+    position: relative;
     background-position: center;
     display: flex;
     flex-direction: column;
@@ -498,7 +515,7 @@ header {
 .contactmaincontact {
     position: absolute;
     height: 65vh;
-    display:inline-flex;
+    display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -528,29 +545,26 @@ header {
     color: white;
 }
 
-@media only screen and (min-width: 300px) and (max-width: 950px){
-    .outdiv{
-            width: auto;
-            height: auto;
-            margin: 0px 7px;
-            padding: 10px
+@media only screen and (min-width: 300px) and (max-width: 950px) {
+    .outdiv {
+        width: auto;
+        height: auto;
+        margin: 0px 7px;
+        padding: 10px
     }
-    .outdiv h1{
+    .outdiv h1 {
         font-size: 22px;
     }
-
-    .outdiv h2{
+    .outdiv h2 {
         font-size: 18px;
     }
-
-    .outdiv a{
+    .outdiv a {
         font-size: 12px;
-        padding:7px;
+        padding: 7px;
     }
     .social {
-    width: 125px;
+        width: 125px;
     }
-
     .social img {
         height: 22px;
         width: 22px;
@@ -558,30 +572,26 @@ header {
     }
 }
 
-@media only screen and (min-width: 280px) and (max-width: 300px)
-{
-    .outdiv{
-            width: auto;
-            height: auto;
-            margin: 0px 7px;
-            padding: 10px
+@media only screen and (min-width: 280px) and (max-width: 300px) {
+    .outdiv {
+        width: auto;
+        height: auto;
+        margin: 0px 7px;
+        padding: 10px
     }
-    .outdiv h1{
+    .outdiv h1 {
         font-size: 15px;
     }
-
-    .outdiv h2{
+    .outdiv h2 {
         font-size: 12px;
     }
-
-    .outdiv a{
+    .outdiv a {
         font-size: 10px;
-        padding:7px;
+        padding: 7px;
     }
     .social {
-    width: 125px;
+        width: 125px;
     }
-
     .social img {
         height: 22px;
         width: 22px;
@@ -589,26 +599,25 @@ header {
     }
 }
 
-@media only screen and (min-width: 280px) and (max-width: 950px){
-    .headerele{
-            visibility: hidden;
-        }
-    .navmenu{
+@media only screen and (min-width: 280px) and (max-width: 950px) {
+    .headerele {
+        visibility: hidden;
+    }
+    .navmenu {
         display: block;
     }
-    .headerdiv{
+    .headerdiv {
         transition: 0.4s;
     }
-    .headerdiv> :nth-child(1){
+    .headerdiv> :nth-child(1) {
         font-size: 20px;
         left: 20px;
         top: 14px;
     }
-    .dropdown-content{
-        top:160px;
+    .dropdown-content {
+        top: 160px;
     }
-
-   .imgmaindiv{
+    .imgmaindiv {
         overflow-y: scroll;
         height: 100vh;
         top: 0%;
@@ -616,69 +625,69 @@ header {
         margin: 0px;
         padding: 0px;
     }
-    .price{
+    .price {
         font-size: 16px;
         margin: 16px auto;
     }
-    .card{
+    .card {
         margin: 15px 0px;
     }
-    .next{
+    .next {
         margin: 12px 4px;
     }
-    .aboutmaincontent{
+    .aboutmaincontent {
         padding: 20px;
         font-size: 16px;
         width: 400px;
     }
-    .shopoutdiv{
+    .shopoutdiv {
         justify-content: center;
         align-items: center;
     }
 }
 
-@media only screen and (min-width: 550px) and (max-width: 900px){
-    .aboutmaincontent{
+@media only screen and (min-width: 550px) and (max-width: 900px) {
+    .aboutmaincontent {
         padding: 20px;
         font-size: 16px;
         width: 400px;
     }
-    .aboutsocial{
+    .aboutsocial {
         width: 150px;
         margin: auto 3px;
         left: -22vw;
     }
-    .aboutsocial img{
+    .aboutsocial img {
         height: 26px;
         width: 26px;
     }
 }
 
-@media only screen and (min-width: 280px) and (max-width: 550px){
-    .aboutmaincontent{
+@media only screen and (min-width: 280px) and (max-width: 550px) {
+    .aboutmaincontent {
         padding: 5px;
         font-size: 12px;
         width: 275px;
         box-shadow: 3px 3px 1px #000000;
     }
-    .aboutsocial{
+    .aboutsocial {
         width: 120px;
         margin: auto 6px;
         left: -22vw;
     }
-    .aboutsocial img{
+    .aboutsocial img {
         height: 22px;
         width: 22px;
     }
 }
 
-@media only screen and (min-width: 650px) and (max-width: 990px){
-    .innercontact{
-        padding:8px 2px;
+@media only screen and (min-width: 650px) and (max-width: 990px) {
+    .innercontact {
+        padding: 8px 2px;
         border-radius: 10px;
         width: 200px;
     }
-    .innercontact img{
+    .innercontact img {
         height: 35px;
         width: 35px;
     }
@@ -686,14 +695,15 @@ header {
         font-size: 26px;
     }
 }
-@media only screen and (min-width: 280px) and (max-width: 650px){
-    .innercontact{
-        padding:8px 2px;
+
+@media only screen and (min-width: 280px) and (max-width: 650px) {
+    .innercontact {
+        padding: 8px 2px;
         border-radius: 8px;
         display: flex;
         margin: 7px 5px;
     }
-    .innercontact img{
+    .innercontact img {
         height: 25px;
         width: 25px;
     }

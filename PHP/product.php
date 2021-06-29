@@ -10,6 +10,7 @@ $t_id = $_GET['t_id'];
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../assets/css/product_style.css">
+	<link rel="icon" type="image/png" href="../assets/png/nav-shopping.png"/>
 
 </head>
 <body>
@@ -29,7 +30,7 @@ function home(){
 }
 
 	function explore(){
-		$.post("productback.php",{tshirt_id:<?php echo $t_id; ?>}, function(data,status){
+		$.post("./productback.php",{tshirt_id:<?php echo $t_id; ?>}, function(data,status){
 			document.getElementsByClassName("outdiv")[0].innerHTML = data;
 		})
 	}

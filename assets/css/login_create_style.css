@@ -10,6 +10,7 @@ body, html {
 	animation-iteration-count: 1; 
 	animation-fill-mode: forwards;
 	font-family: 'Alice', serif;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
  @keyframes fadeInAnimation { 
@@ -87,7 +88,7 @@ input[type=text],input[type=password]{
 	color: rgb(0, 89, 179);
 }
 input[type=submit]{
-	background-color: purple;
+	 background-color: purple;
 	padding: auto;
 	border-radius: 4px;
 	width:85px;
@@ -103,6 +104,7 @@ input[type=submit]{
 	transform: scale(1);
 	font-family: 'Alice', serif;
 	margin-top: 5px;
+	outline: none;
 }
 
 .signin{

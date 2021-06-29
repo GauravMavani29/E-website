@@ -1,8 +1,12 @@
+<?php
+error_reporting(0);
+?>
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="../assets/css/admin_style.css">
   <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/png/nav-login.png"/>
   <title>Sign in</title>
 </head>
 
@@ -16,7 +20,9 @@
     if($user == "Gaurav_2909" and $pass == "Gaurav@123")
     {
       $msg = "success";
-      header("location: ./dashboard.php?login=$msg");
+      session_start();
+      $_SESSION['admin'] = $user;
+      header("location: ./dashboard.php");
     }
   }
 ?>

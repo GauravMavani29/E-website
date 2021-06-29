@@ -65,7 +65,7 @@
 			$query = mysqli_query($con,$sql);
 
 			if(!$query){
-				$usererror = "User name is already exist";
+				$usererror = "User Id is already exist";
 				$newuser = "";
 			}
 			else{

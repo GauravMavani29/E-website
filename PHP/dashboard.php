@@ -1,3 +1,8 @@
+<?php 
+  session_start();
+  if($_SESSION['admin'])
+  {
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,13 +23,21 @@
     else{
     $color = "red";
   }
+  
   ?>
+  <div class="adminbar">
+    <ul>
+      <li><a href="./adminproducts.php">Products</a></li>
+      <li><a href="" style="color: yellow;">Add Products</a></li>
+      <li><a href="./adminorder.php">Orders</a></li>
+      <li><a href="./adminlogout.php">LogOut</a></li>      
+    </ul>
+  </div>
 <div class="container">
 <h3>Add Product</h3>
   <form action="dash_validation.php" method="POST" enctype="multipart/form-data">
     <label for="t-title">T-shirt Title</label>
     <input type="text" id="t-title" name="t-title" placeholder="T-shirt Title" required>
-
     <label for="length">Length (In Inches)</label>
     <input type="text" id="length" name="length" placeholder="Length of the t-shirt" required>
 
@@ -53,15 +66,13 @@
     <textarea id="composition" name="composition" placeholder="Write something about composition .." style="height:80px" required></textarea>
 
     <input type="submit" value="Submit"><span id="success" style="color: <?php echo $color; ?>; margin: 5px;"><?php echo $msg; ?></span>
-    <input type="button" value="Logout" onclick="back()">
   </form>
 </div>
-
-<script type="text/javascript" language="javascript">
-  function back()
-  {
-    window.location.href = './admin.php?logout=<?php echo "failed"; ?>';
-  }
-</script>
 </body>
 </html>
+<?php
+}
+else{
+  header("location: ./admin.php");
+}
+?>

@@ -8,6 +8,7 @@ body {
     animation-iteration-count: 1; 
     animation-fill-mode: forwards;
     font-family: 'Alice', serif;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     /* background: linear-gradient(141deg, #0fb834 0%, #db1fac 51%, #b0e82c 75%); */
 }
  @keyframes fadeInAnimation { 
@@ -83,6 +84,7 @@ h2 {
     width: 130px;
     position: relative;
     filter: invert(100%);
+    outline: none;
 }
 
 .explore span {

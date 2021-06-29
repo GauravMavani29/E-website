@@ -128,7 +128,7 @@ error_reporting(0);
         }
 
         $quantity = $_POST["quantity"];
-        $total = $_POST["total"];
+        $total = ((int)$price * $quantity);
         $month = $_POST['month'];
         $year = $_POST['year'];
         if(($_POST["method"] === "Cash on delivery") and ($todo == 9)){

@@ -9,6 +9,7 @@
     animation-iteration-count: 1; 
     animation-fill-mode: forwards;
     /*background-color: black;*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
  @keyframes fadeInAnimation { 

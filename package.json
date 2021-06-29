@@ -1,0 +1,25 @@
+{
+  "name": "iamengineer",
+  "version": "1.0.0",
+  "description": "Website",
+  "main": "index.php",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "fullpage.js": "^3.0.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "react-scripts build",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GauravMavani29/E-website.git"
+  },
+  "author": "Gaurav Mavani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GauravMavani29/E-website/issues"
+  },
+  "homepage": "https://github.com/GauravMavani29/E-website#readme"
+}
